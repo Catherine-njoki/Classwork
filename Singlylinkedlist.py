@@ -14,7 +14,7 @@ snode3 = SinglyLinkedList("3")
 snode4 = SinglyLinkedList("4")
 
 #use pointers to link them ,at the end it will be automtically pointed to None
-snode1.nextnode=snode2
+snode1.nextnode=snode2 #this pointer is holding node2
 snode2.nextnode=snode3
 snode3.nextnode=snode4
 
