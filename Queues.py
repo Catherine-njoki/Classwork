@@ -7,28 +7,28 @@ class CircularQueue:
 
     def __init__(self):
         self._data = [None] * CircularQueue.DEFAULT_CAPACITY #this method is a list
-        self._size = 0
-        self._front = 0
+        self._size = 0 #how many elements are in the list
+        self._front = 0#the first element in the queue
 
     # def __len__(self):
     #     return self._size
     # #this gives the size of the array
 
-    def isEmpty(self):
+    def isEmpty(self):#it will return true if the array is empty or it's filled none
         return self._size ==0
 
-    def first(self):
+    def first(self):#it peeks at the first element, if it's empty it will raise an Empty exception
         if self.isEmpty():
             return Empty("Queue is empty")#this line exits this method
         return self._data[self._front]#if the list is not empty
    # students =["Mary","John","Doe"]
     #students[0]#this one accesses Mary
     #create a dequeued element below
-        dequeued_element = self._data[self._front]
+       # dequeued_element = self._data[self._front]
         #lets do some garbage collection
-        self._data[self._front] = None
+      #  self._data[self._front] = None
         #decrease queue by one
-        self._front -= 1
+       # self._front -= 1
 
 
 
