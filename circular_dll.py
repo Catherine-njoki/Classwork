@@ -33,4 +33,121 @@ class CircularDoublyLinkedList:
 
         current_node = self.start_node
         while True:
-            if
+            if current_node.value == value:
+                if current_node.next_node == current_node:
+                    self.start_node = None
+                else:
+                    current_node.previous_node.next_node = current_node.next_node
+                    current_node.next_node.previous_node = current_node.previous_node
+                    if current_node == self.start_node:
+                        self.start_node = current_node.next_node
+                return
+            current_node = current_node.next_node
+            if current_node == self.start_node:
+                print(f" Value {value} not found in the list.")
+                break
+    def show_list_foward(self):
+            if self.start_node is None:
+                print("The list is empty")
+                return
+
+            current_node = self.start_node
+            value_list = []
+            while True:
+                value_list.append(
+                    str(current_node.value))
+                current_node = current_node.next_node
+                if current_node == self.start_node:
+                    break
+            output_string="->".join(values_list)
+            print(output_string)
+    def show_list_backward(self):
+            if self.start_node is None:
+                print("The list is empty.")
+                return
+            last_node = self.start_node.previous_node
+            current_node = last_node
+            value_list = []
+            while True:
+                values_list.append(str(current_node.value))
+                current_node = current_node.previous_node
+                if current_node == last_node:
+                    break
+
+            output_string = "<-".join(values_list)
+            print(output_string)
+if __name__ == "__main__":
+    my_circular_list = CircularDoublyLinkedList()
+    my_circular_list.insert_at_end("Quick")
+    my_circular_list.insert_at_end("Brown")
+    my_circular_list.insert_at_end("Fox")
+
+    print("List after inserting at the end:")
+    my_circular_list.show_list_forward()
+    my_circular_list.insert_at_beginning("THE")
+    print("List after inserting at the beginning:")
+    my_circular_list.show_list_forward()
+
+    print("List displayed backward:")
+    my_circular_list.show_list_backward()
+
+    my_circular_list.remove_by_value("QUICK")
+    print("List after removing QUICK:")
+    my_circular_list.show_list_forward()
+
+    my_circular_list.remove_by_value("QUICK") 
+    my_circular_list.remove_by_value("SLOW") 
+    my_circular_list.remove_by_value("BROWN")
+    print("List after removing BROWN:")
+    my_circular_list.show_list_forward()
+
+    
+    my_circular_list.remove_by_value("THE")
+    my_circular_list.remove_by_value("FOX")
+    print("List after removing all:")
+
+    my_circular_list.show_list_forward()
+
+
+
+
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+     
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
