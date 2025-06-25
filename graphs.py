@@ -107,7 +107,7 @@ if __name__ == '__main__':
     graph_obj.add_edge("D","B",4)
 
     print(graph_obj)
-    print("BREADTH FIST SEARCH: \n")
+    print("BREADTH FIRST SEARCH: \n")
     print(graph_obj.bfs("A"))
 
     print("DEPTH FIRST SEARCH: \n")
