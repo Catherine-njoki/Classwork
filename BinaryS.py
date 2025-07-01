@@ -22,3 +22,4 @@ if result != -1:
     print(f"Binary Search result: Found at index {result}")
 else:
     print("Binary Search result: Not found")
+#gg
